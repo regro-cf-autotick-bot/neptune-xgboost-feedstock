@@ -1,5 +1,5 @@
 {% set name = "neptune-xgboost" %}
-{% set version = "0.9.7" %}
+{% set version = "0.9.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/neptune-ai/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: dfce72dfa1114b9b5411d3970d63f26a0cfb9da1ba16e9359e145a45606019e2
+  sha256: a059d21d692e7448a1a6c42034a6824cacccbfcc55fd4fe948f15aa1021b3a39
 
 build:
   noarch: python
