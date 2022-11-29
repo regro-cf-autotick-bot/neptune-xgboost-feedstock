@@ -31,6 +31,10 @@ test:
   imports:
     - neptune_xgboost
     - neptune_xgboost.impl
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://neptune.ai/
