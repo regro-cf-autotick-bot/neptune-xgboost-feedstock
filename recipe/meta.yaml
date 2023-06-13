@@ -1,4 +1,5 @@
 {% set name = "neptune-xgboost" %}
+{% set package_name = "neptune_xgboost" %}
 {% set version = "1.1.0" %}
 
 package:
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/neptune-ai/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ package_name }}-{{ version }}.tar.gz
   sha256: ef1848e54651c682f8649404162ba5ab865df2018237fb25200320a4733ddc1f
 
 build:
@@ -18,16 +19,23 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - poetry-core >=1.0.0
+    - poetry-dynamic-versioning
   run:
     - matplotlib-base
     - neptune-client >=0.9
     - python >=3.6
     - xgboost >=1.3.0
+    - python-graphviz
 
 test:
   imports:
     - neptune_xgboost
     - neptune_xgboost.impl
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://neptune.ai/
@@ -43,6 +51,7 @@ extra:
     - aniezurawski
     - HubertJaworski
     - pitercl
-    - PiotrJander
-    - shnela
-    - pkasprzyk
+    - Raalsky
+    - twolodzko
+    - AleksanderWWW
+    - PatrykGala
