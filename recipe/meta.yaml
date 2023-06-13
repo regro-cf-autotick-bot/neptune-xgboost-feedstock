@@ -1,6 +1,6 @@
 {% set name = "neptune-xgboost" %}
 {% set package_name = "neptune_xgboost" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ package_name }}-{{ version }}.tar.gz
-  sha256: 789c9c039ac8d277ccca078a9651e8d3fb20601af0d81377fc451cf3cdf21e1e
+  sha256: e6dc3f0aa7f7e8d9591b9321d2704fbcd6ccbfe1c840017b8730d8da769f75a0
 
 build:
   noarch: python
